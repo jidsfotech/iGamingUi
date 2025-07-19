@@ -20,6 +20,7 @@ export interface EndedSessionData {
   totalPlayers: number;
   totalWins: number;
   endTime: string;
+  selectedNumber: string;
   nextSessionStart: string;
 }
 

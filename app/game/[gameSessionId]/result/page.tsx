@@ -65,8 +65,14 @@ export default function ResultPage() {
       <div className="flex-[2] flex flex-col items-center justify-center p-4 md:p-8">
         <div className="flex flex-col items-center justify-center mb-8 gap-2">
           <div className="text-2xl font-bold text-black">Result</div>
-          <div className="text-4xl font-extrabold text-black">
-            {endedSession?.winningNumber ?? '-'}
+          <div className="flex items-center justify-center gap-2">
+            <span className="text-base text-black mt-5">Winning Number:</span>
+            <span className="text-4xl font-extrabold text-black">
+              {endedSession?.winningNumber ?? '-'}
+            </span>
+          </div>
+          <div className="text-base text-black mt-5">
+            Selected Number: {endedSession?.selectedNumber ?? '-'}
           </div>
           <div className="text-base text-black mt-5">
             Total players: {endedSession?.totalPlayers ?? 0}
