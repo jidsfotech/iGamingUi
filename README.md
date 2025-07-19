@@ -36,6 +36,9 @@ This project simulates a real-time game where users join active game sessions, s
   * totalPlayers
   * totalWins
   * nextSessionStartTime
+* The frontend uses the nextSessionStart property to calculate and show a count down of when the next session will start
+* Once the next session starts, the user is automatically redirected back to the /game screen to join the new session.
+* And the process goes on like that
 
 5️⃣ Top Players
 
@@ -54,9 +57,9 @@ Summary of Key Features
 
 Deployment
 
-* The application is deployed on vercel and accessible via the link.
+* The application is deployed on vercel and accessible via the demo link.
+https://i-gaming-ui.vercel.app
 
-https://i-gaming-mi24xzypa-jidsfotechs-projects.vercel.app/
 
 ## Tech Stack
 | Layer             | Technology                                                      |

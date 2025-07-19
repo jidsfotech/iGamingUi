@@ -14,6 +14,19 @@ export default function GamePage() {
   const [sessionId, setSessionId] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
+
+  
+    useEffect(() => {
+    // Check for JWT token in localStorage
+    const token = localStorage.getItem('token');
+    if (!token) {
+      setIsAuthenticated(false);
+      router.replace('/auth');
+    } else {
+      setIsAuthenticated(true);
+    }
+  }, []);
 
   // Fetch session info on mount
   useEffect(() => {
@@ -52,7 +65,7 @@ export default function GamePage() {
     if (value) {
       setInputDisabled(true);
       try {
-        await apiClient.post('/game/player-select', { number: Number(value) });
+        await apiClient.put('/game/player-select', { number: Number(value) });
       } catch (err) {
       }
     }

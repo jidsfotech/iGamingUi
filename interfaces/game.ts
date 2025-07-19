@@ -3,7 +3,7 @@ export interface SessionPlayer {
   username: string;
   selectedNumber: number;
   wins?: number;
-  losses?: number;
+  looses?: number;
 }
 
 export interface SessionData {
